@@ -30,7 +30,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '13.0'
 
-  s.source_files = "MIPS_iOS_SDK/**/*.{h,m}"
+  s.source_files = "MIPS_iOS_SDK/**/*.{h,m,swift}"
   
   # s.resource_bundles = {
   #   'MIPS_iOS_SDK' => ['MIPS_iOS_SDK/Assets/*.png']
