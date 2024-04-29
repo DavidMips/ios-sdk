@@ -28,6 +28,10 @@ open class MIPSViewController : UIViewController {
     private var amount : Amount! = nil
     private var orderID : String! = nil
     
+    
+    private var backgruondTask : UIBackgroundTaskIdentifier = .invalid
+    
+    
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
     }
@@ -89,11 +93,28 @@ open class MIPSViewController : UIViewController {
         setupNotificationListners()
     }
     
+    
+    @objc func appMovedToBackground() {
+        startbackgroundMethod()
+        print("App moved to background!")
+        
+    }
+    private func startbackgroundMethod() {
+        backgruondTask = UIApplication.shared.beginBackgroundTask {[weak self] in
+            guard let self = self
+            else{
+                return
+            }
+            UIApplication.shared.endBackgroundTask(self.backgruondTask)
+//            print("hey bckground task expired")
+        }
+    }
+    
     private func setupNotificationListners() {
         let notificationCenter = NotificationCenter.default
         
-//        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
-//        
+        notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
+        
 //        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     

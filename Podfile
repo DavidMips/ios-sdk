@@ -15,8 +15,10 @@ target 'MIPS_iOS_SDK' do
 
   pod 'CryptoSwift', '~> 1.8.2'
 
-  pod 'CocoaLumberjack'
+  # pod 'CocoaLumberjack'
+  pod 'CocoaLumberjack/Swift'
 
+  pod 'Alamofire'
   # Pods for MIPS_iOS_SDK
 
 end
