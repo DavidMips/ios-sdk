@@ -39,4 +39,11 @@ TODO: Add long description of the pod here.
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'CryptoSwift', '~> 1.8.2'
+
+  # pod 'CocoaLumberjack'
+  s.dependency 'CocoaLumberjack/Swift'
+
+  s.dependency 'Alamofire'
+
 end
