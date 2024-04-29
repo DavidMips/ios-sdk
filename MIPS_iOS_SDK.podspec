@@ -21,16 +21,16 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/akshar@shyankdev.us/MIPS_iOS_SDK'
+  s.homepage         = 'https://github.com/shyankdev/mipsSwiftSdka'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'akshar@shyankdev.us' => 'akshar@shyankdev.us' }
-  s.source           = { :git => 'https://github.com/akshar@shyankdev.us/MIPS_iOS_SDK.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/shyankdev/mipsSwiftSdka.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '13.0'
 
-  s.source_files = 'MIPS_iOS_SDK/Classes/**/*'
+  s.source_files = 'MIPS_iOS_SDK'
   
   # s.resource_bundles = {
   #   'MIPS_iOS_SDK' => ['MIPS_iOS_SDK/Assets/*.png']
