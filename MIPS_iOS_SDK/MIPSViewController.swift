@@ -57,11 +57,36 @@ open class MIPSViewController : UIViewController {
         setupUI()
     }
     
-    private func createPayment() {
+    public func createPayment() {
         let totalAmount = amount.price * 100
 //        let orderID = merchantDetails.sIdForm
-        let checksum = "\(merchantDetails.sIdForm)\(orderID!)\(totalAmount)\(amount.currency.rawValue)\(merchantDetails.salt)"
+        let checksum = "\(merchantDetails.sIdForm)\(orderID!)\(totalAmount)\(amount.currency.rawValue)\(merchantDetails.salt)".sha256()
         
+        let paymentJSON = MipsPaymentJSON()
+        paymentJSON.id_form = merchantDetails.sIdForm
+        paymentJSON.id_order = orderID!
+        paymentJSON.amount = amount.price
+        paymentJSON.currency = amount.currency.rawValue
+        paymentJSON.checksum = checksum
+        
+        let (data , dataErr) = JSONCoder.encodeJso(json: paymentJSON)
+        guard dataErr == nil , let data = data
+        else {return}
+        
+        let jsonString = "\((String(data: data, encoding: .utf8))!)"
+        let middleUrl = try! jsonString.aesEncrypt(key: merchantDetails.sCipherKey)
+        let finalUrl = middleUrl.toBase64()
+        
+        let urlStirng = "\(self.networkURL.baseURl)\(finalUrl)&smid=\(self.merchantDetails.sIdMerchant)"
+        guard let urlToPayment = NSURL(string: urlStirng)
+        else{return}
+        
+        let req = URLRequest(url: urlToPayment as URL)
+        
+        self.webView!.load(req as URLRequest)
+        
+        
+        setupNotificationListners()
     }
     
     private func setupNotificationListners() {

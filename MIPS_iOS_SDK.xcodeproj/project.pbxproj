@@ -22,9 +22,15 @@
 		56AE5E7F2BE0249700C90CA9 /* MipsNetworkUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E7E2BE0249700C90CA9 /* MipsNetworkUrls.swift */; };
 		56AE5E812BE025DC00C90CA9 /* Amount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E802BE025DC00C90CA9 /* Amount.swift */; };
 		56AE5E832BE0278C00C90CA9 /* MipsPaymentJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E822BE0278C00C90CA9 /* MipsPaymentJSON.swift */; };
+		56AE5E862BE02F1D00C90CA9 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E852BE02F1D00C90CA9 /* String+Extension.swift */; };
+		DE983ABBC9ACAF6A02DAE687 /* Pods_MIPS_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15722E32834DC9766283938 /* Pods_MIPS_iOS_SDK.framework */; };
+		F5BB53E5B821B5AA71112886 /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980C3D2C1314D766195EF3CC /* Pods_DemoApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22F6181E0B7EEC850BC70407 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		2A64CA928E9FDF24161B0C1C /* Pods-DemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.debug.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		44E78FB91A106F12153EFB81 /* Pods-MIPS_iOS_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MIPS_iOS_SDK.release.xcconfig"; path = "Target Support Files/Pods-MIPS_iOS_SDK/Pods-MIPS_iOS_SDK.release.xcconfig"; sourceTree = "<group>"; };
 		56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MIPS_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AE5E522BE003F000C90CA9 /* MIPS_iOS_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIPS_iOS_SDK.h; sourceTree = "<group>"; };
 		56AE5E5D2BE0050100C90CA9 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +49,10 @@
 		56AE5E7E2BE0249700C90CA9 /* MipsNetworkUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MipsNetworkUrls.swift; sourceTree = "<group>"; };
 		56AE5E802BE025DC00C90CA9 /* Amount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amount.swift; sourceTree = "<group>"; };
 		56AE5E822BE0278C00C90CA9 /* MipsPaymentJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MipsPaymentJSON.swift; sourceTree = "<group>"; };
+		56AE5E852BE02F1D00C90CA9 /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		85CE8212A6B88716E9A6FD47 /* Pods-MIPS_iOS_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MIPS_iOS_SDK.debug.xcconfig"; path = "Target Support Files/Pods-MIPS_iOS_SDK/Pods-MIPS_iOS_SDK.debug.xcconfig"; sourceTree = "<group>"; };
+		980C3D2C1314D766195EF3CC /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15722E32834DC9766283938 /* Pods_MIPS_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MIPS_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE983ABBC9ACAF6A02DAE687 /* Pods_MIPS_iOS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,18 +68,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5BB53E5B821B5AA71112886 /* Pods_DemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		26486FD4A5341EA482F9BCE8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				980C3D2C1314D766195EF3CC /* Pods_DemoApp.framework */,
+				B15722E32834DC9766283938 /* Pods_MIPS_iOS_SDK.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		54FCD5B06A0E47794A34685C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2A64CA928E9FDF24161B0C1C /* Pods-DemoApp.debug.xcconfig */,
+				22F6181E0B7EEC850BC70407 /* Pods-DemoApp.release.xcconfig */,
+				85CE8212A6B88716E9A6FD47 /* Pods-MIPS_iOS_SDK.debug.xcconfig */,
+				44E78FB91A106F12153EFB81 /* Pods-MIPS_iOS_SDK.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		56AE5E452BE003F000C90CA9 = {
 			isa = PBXGroup;
 			children = (
 				56AE5E512BE003F000C90CA9 /* MIPS_iOS_SDK */,
 				56AE5E5E2BE0050100C90CA9 /* DemoApp */,
 				56AE5E502BE003F000C90CA9 /* Products */,
+				54FCD5B06A0E47794A34685C /* Pods */,
+				26486FD4A5341EA482F9BCE8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,6 +118,7 @@
 		56AE5E512BE003F000C90CA9 /* MIPS_iOS_SDK */ = {
 			isa = PBXGroup;
 			children = (
+				56AE5E842BE02EF500C90CA9 /* Extensions */,
 				56AE5E7B2BE0233900C90CA9 /* Utils */,
 				56AE5E7A2BE0232F00C90CA9 /* Models */,
 				56AE5E792BE0232200C90CA9 /* Networking */,
@@ -135,6 +170,14 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		56AE5E842BE02EF500C90CA9 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				56AE5E852BE02F1D00C90CA9 /* String+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -153,6 +196,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56AE5E562BE003F000C90CA9 /* Build configuration list for PBXNativeTarget "MIPS_iOS_SDK" */;
 			buildPhases = (
+				CB399E1BC6962CECAFF7EC49 /* [CP] Check Pods Manifest.lock */,
 				56AE5E4A2BE003F000C90CA9 /* Headers */,
 				56AE5E4B2BE003F000C90CA9 /* Sources */,
 				56AE5E4C2BE003F000C90CA9 /* Frameworks */,
@@ -171,6 +215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 56AE5E6E2BE0050400C90CA9 /* Build configuration list for PBXNativeTarget "DemoApp" */;
 			buildPhases = (
+				EE7BFE7DCF24AEB6399B33D9 /* [CP] Check Pods Manifest.lock */,
 				56AE5E592BE0050100C90CA9 /* Sources */,
 				56AE5E5A2BE0050100C90CA9 /* Frameworks */,
 				56AE5E5B2BE0050100C90CA9 /* Resources */,
@@ -242,12 +287,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CB399E1BC6962CECAFF7EC49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MIPS_iOS_SDK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EE7BFE7DCF24AEB6399B33D9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DemoApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		56AE5E4B2BE003F000C90CA9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				56AE5E7D2BE023F300C90CA9 /* MerchantDetails.swift in Sources */,
+				56AE5E862BE02F1D00C90CA9 /* String+Extension.swift in Sources */,
 				56AE5E832BE0278C00C90CA9 /* MipsPaymentJSON.swift in Sources */,
 				56AE5E762BE0209000C90CA9 /* Currency.swift in Sources */,
 				56AE5E782BE020C900C90CA9 /* JSONCoder.swift in Sources */,
@@ -412,6 +505,7 @@
 		};
 		56AE5E572BE003F000C90CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85CE8212A6B88716E9A6FD47 /* Pods-MIPS_iOS_SDK.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -452,6 +546,7 @@
 		};
 		56AE5E582BE003F000C90CA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44E78FB91A106F12153EFB81 /* Pods-MIPS_iOS_SDK.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -491,6 +586,7 @@
 		};
 		56AE5E6F2BE0050400C90CA9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A64CA928E9FDF24161B0C1C /* Pods-DemoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -520,6 +616,7 @@
 		};
 		56AE5E702BE0050400C90CA9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22F6181E0B7EEC850BC70407 /* Pods-DemoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

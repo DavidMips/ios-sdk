@@ -1,0 +1,22 @@
+PODS:
+  - CocoaLumberjack (3.8.5):
+    - CocoaLumberjack/Core (= 3.8.5)
+  - CocoaLumberjack/Core (3.8.5)
+  - CryptoSwift (1.8.2)
+
+DEPENDENCIES:
+  - CocoaLumberjack
+  - CryptoSwift (~> 1.8.2)
+
+SPEC REPOS:
+  trunk:
+    - CocoaLumberjack
+    - CryptoSwift
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: 6a459bc897d6d80bd1b8c78482ec7ad05dffc3f0
+  CryptoSwift: c63a805d8bb5e5538e88af4e44bb537776af11ea
+
+PODFILE CHECKSUM: 7cc3d3b64f9945437034460f44963fe1b0bd986a
+
+COCOAPODS: 1.15.2
