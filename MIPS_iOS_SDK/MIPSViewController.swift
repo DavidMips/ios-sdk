@@ -40,7 +40,7 @@ open class MIPSViewController : UIViewController {
     }
     
     
-    convenience init(
+    public convenience init(
         networkURL : MipsNetworkUrls ,
         merchantDetails : MerchantDetails ,
         credentials : MerchantCredentials ,

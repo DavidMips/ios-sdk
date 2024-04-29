@@ -8,7 +8,15 @@
 import Foundation
 
 
-public struct Amount {
+public class Amount {
     public let currency : Currency
     public let price : Int
+    
+    public init(
+        currency: Currency,
+        price: Int
+    ) {
+        self.currency = currency
+        self.price = price
+    }
 }

@@ -26,9 +26,35 @@
 		56AE5E882BE0320800C90CA9 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E872BE0320800C90CA9 /* LogManager.swift */; };
 		56AE5E8A2BE0367900C90CA9 /* NetworkAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E892BE0367900C90CA9 /* NetworkAdaptor.swift */; };
 		56AE5E8C2BE038E800C90CA9 /* MerchantCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E8B2BE038E800C90CA9 /* MerchantCredentials.swift */; };
+		56AE5E8D2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */; };
+		56AE5E8E2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE983ABBC9ACAF6A02DAE687 /* Pods_MIPS_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15722E32834DC9766283938 /* Pods_MIPS_iOS_SDK.framework */; };
 		F5BB53E5B821B5AA71112886 /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980C3D2C1314D766195EF3CC /* Pods_DemoApp.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		56AE5E8F2BE0409200C90CA9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 56AE5E462BE003F000C90CA9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 56AE5E4E2BE003F000C90CA9;
+			remoteInfo = MIPS_iOS_SDK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		56AE5E912BE0409300C90CA9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				56AE5E8E2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22F6181E0B7EEC850BC70407 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -56,6 +82,7 @@
 		56AE5E872BE0320800C90CA9 /* LogManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		56AE5E892BE0367900C90CA9 /* NetworkAdaptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAdaptor.swift; sourceTree = "<group>"; };
 		56AE5E8B2BE038E800C90CA9 /* MerchantCredentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MerchantCredentials.swift; sourceTree = "<group>"; };
+		56AE5E922BE040D400C90CA9 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CE8212A6B88716E9A6FD47 /* Pods-MIPS_iOS_SDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MIPS_iOS_SDK.debug.xcconfig"; path = "Target Support Files/Pods-MIPS_iOS_SDK/Pods-MIPS_iOS_SDK.debug.xcconfig"; sourceTree = "<group>"; };
 		980C3D2C1314D766195EF3CC /* Pods_DemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15722E32834DC9766283938 /* Pods_MIPS_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MIPS_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				56AE5E8D2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Frameworks */,
 				F5BB53E5B821B5AA71112886 /* Pods_DemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +112,7 @@
 		26486FD4A5341EA482F9BCE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				56AE5E922BE040D400C90CA9 /* Alamofire.framework */,
 				980C3D2C1314D766195EF3CC /* Pods_DemoApp.framework */,
 				B15722E32834DC9766283938 /* Pods_MIPS_iOS_SDK.framework */,
 			);
@@ -228,10 +257,12 @@
 				56AE5E592BE0050100C90CA9 /* Sources */,
 				56AE5E5A2BE0050100C90CA9 /* Frameworks */,
 				56AE5E5B2BE0050100C90CA9 /* Resources */,
+				56AE5E912BE0409300C90CA9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				56AE5E902BE0409200C90CA9 /* PBXTargetDependency */,
 			);
 			name = DemoApp;
 			productName = DemoApp;
@@ -374,6 +405,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		56AE5E902BE0409200C90CA9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 56AE5E4E2BE003F000C90CA9 /* MIPS_iOS_SDK */;
+			targetProxy = 56AE5E8F2BE0409200C90CA9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		56AE5E652BE0050100C90CA9 /* Main.storyboard */ = {
