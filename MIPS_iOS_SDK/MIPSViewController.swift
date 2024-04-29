@@ -74,7 +74,7 @@ open class MIPSViewController : UIViewController {
         let paymentJSON = MipsPaymentJSON()
         paymentJSON.id_form = merchantDetails.sIdForm
         paymentJSON.id_order = orderID!
-        paymentJSON.amount = amount.price
+        paymentJSON.amount = totalAmount
         paymentJSON.currency = amount.currency.rawValue
         paymentJSON.checksum = checksum
         
