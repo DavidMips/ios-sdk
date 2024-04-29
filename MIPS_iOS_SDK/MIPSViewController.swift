@@ -27,10 +27,13 @@ open class MIPSViewController : UIViewController {
     private var merchantDetails : MerchantDetails! = nil
     private var amount : Amount! = nil
     private var orderID : String! = nil
+    private var credentials : MerchantCredentials! = nil
     
     
     private var backgruondTask : UIBackgroundTaskIdentifier = .invalid
     
+    
+    public var delegate : MipsPaymentPageDelegate? = nil
     
     private override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -40,12 +43,14 @@ open class MIPSViewController : UIViewController {
     convenience init(
         networkURL : MipsNetworkUrls ,
         merchantDetails : MerchantDetails ,
+        credentials : MerchantCredentials ,
         amount : Amount ,
         orderID : String
     ) {
         self.init(nibName: nil, bundle: nil)
         self.networkURL = networkURL
         self.merchantDetails = merchantDetails
+        self.credentials = credentials
         self.amount = amount
         self.orderID = orderID
     }
@@ -94,19 +99,38 @@ open class MIPSViewController : UIViewController {
     }
     
     
+    @objc func appMovedToForeground() {
+        LogManager.shared.info("App moved to foreground!")
+        UIApplication.shared.endBackgroundTask(self.backgruondTask)
+        self.backgruondTask = .invalid
+        
+        NetworkAdaptor.checkPaymentStatus(
+            mipsNetworkURl: self.networkURL,
+            merchant: self.merchantDetails, 
+            credentials: self.credentials,
+            orderID: self.orderID
+        ) { [weak self] isPaymentCompleted in
+            guard let self
+            else {return}
+            if isPaymentCompleted {
+                self.showSuceesPaymrnt(.juice)
+            }
+        } errorHandler: { errorString in
+            LogManager.shared.error("got error while callin mips payment confirmation call with error  :=> \(errorString)")
+        }
+    }
+    
     @objc func appMovedToBackground() {
         startbackgroundMethod()
-        print("App moved to background!")
+        LogManager.shared.info("app moved to background mode")
         
     }
     private func startbackgroundMethod() {
         backgruondTask = UIApplication.shared.beginBackgroundTask {[weak self] in
             guard let self = self
-            else{
-                return
-            }
+            else{return}
             UIApplication.shared.endBackgroundTask(self.backgruondTask)
-//            print("hey bckground task expired")
+            LogManager.shared.info("bckground task expired")
         }
     }
     
@@ -115,7 +139,7 @@ open class MIPSViewController : UIViewController {
         
         notificationCenter.addObserver(self, selector: #selector(appMovedToBackground), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
-//        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
+        notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.willEnterForegroundNotification, object: nil)
     }
     
     private func setupUI() {
@@ -144,10 +168,27 @@ open class MIPSViewController : UIViewController {
         ])
     }
     
-    
-    
+    private func showSuceesPaymrnt(_ mode : PaymentMode) {
+        delegate?.successPayment(self, orderID: orderID, mode: mode)
+    }
 }
 
+
 extension MIPSViewController : WKNavigationDelegate, WKUIDelegate {
-    
+    public func webView(_ webView: WKWebView, runJavaScriptAlertPanelWithMessage message: String, initiatedByFrame frame: WKFrameInfo, completionHandler: @escaping () -> Void) {
+        LogManager.shared.info("message from mips web page -> \(message)")
+        if (message.lowercased() == "success") {
+            showSuceesPaymrnt(.instant)
+        }
+        if (message.lowercased() == "success_juice"){
+            showSuceesPaymrnt(.juice)
+        }
+        
+        if (message.lowercased() == "success_bank_transfer"){
+            showSuceesPaymrnt(.bankTransfer)
+        }
+        completionHandler()
+        UIApplication.shared.endBackgroundTask(self.backgruondTask)
+        self.backgruondTask = .invalid
+    }
 }
