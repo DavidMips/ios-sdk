@@ -41,6 +41,8 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'CryptoSwift', '~> 1.8.2'
 
+  s.swift_version = '5.9'
+
   # pod 'CocoaLumberjack'
   s.dependency 'CocoaLumberjack/Swift'
 
