@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		56AE5E532BE003F000C90CA9 /* MIPS_iOS_SDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 56AE5E522BE003F000C90CA9 /* MIPS_iOS_SDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		56AE5E602BE0050100C90CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E5F2BE0050100C90CA9 /* AppDelegate.swift */; };
-		56AE5E622BE0050100C90CA9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E612BE0050100C90CA9 /* SceneDelegate.swift */; };
-		56AE5E642BE0050100C90CA9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E632BE0050100C90CA9 /* ViewController.swift */; };
-		56AE5E672BE0050100C90CA9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AE5E652BE0050100C90CA9 /* Main.storyboard */; };
-		56AE5E692BE0050400C90CA9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56AE5E682BE0050400C90CA9 /* Assets.xcassets */; };
-		56AE5E6C2BE0050400C90CA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AE5E6A2BE0050400C90CA9 /* LaunchScreen.storyboard */; };
 		56AE5E722BE0051400C90CA9 /* MIPSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E712BE0051400C90CA9 /* MIPSViewController.swift */; };
 		56AE5E742BE0207900C90CA9 /* PaymentMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E732BE0207900C90CA9 /* PaymentMode.swift */; };
 		56AE5E762BE0209000C90CA9 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E752BE0209000C90CA9 /* Currency.swift */; };
@@ -26,35 +20,8 @@
 		56AE5E882BE0320800C90CA9 /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E872BE0320800C90CA9 /* LogManager.swift */; };
 		56AE5E8A2BE0367900C90CA9 /* NetworkAdaptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E892BE0367900C90CA9 /* NetworkAdaptor.swift */; };
 		56AE5E8C2BE038E800C90CA9 /* MerchantCredentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AE5E8B2BE038E800C90CA9 /* MerchantCredentials.swift */; };
-		56AE5E8D2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */; };
-		56AE5E8E2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		DE983ABBC9ACAF6A02DAE687 /* Pods_MIPS_iOS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15722E32834DC9766283938 /* Pods_MIPS_iOS_SDK.framework */; };
-		F5BB53E5B821B5AA71112886 /* Pods_DemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 980C3D2C1314D766195EF3CC /* Pods_DemoApp.framework */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		56AE5E8F2BE0409200C90CA9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 56AE5E462BE003F000C90CA9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 56AE5E4E2BE003F000C90CA9;
-			remoteInfo = MIPS_iOS_SDK;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		56AE5E912BE0409300C90CA9 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				56AE5E8E2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		22F6181E0B7EEC850BC70407 /* Pods-DemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DemoApp.release.xcconfig"; path = "Target Support Files/Pods-DemoApp/Pods-DemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -62,14 +29,6 @@
 		44E78FB91A106F12153EFB81 /* Pods-MIPS_iOS_SDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MIPS_iOS_SDK.release.xcconfig"; path = "Target Support Files/Pods-MIPS_iOS_SDK/Pods-MIPS_iOS_SDK.release.xcconfig"; sourceTree = "<group>"; };
 		56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MIPS_iOS_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		56AE5E522BE003F000C90CA9 /* MIPS_iOS_SDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MIPS_iOS_SDK.h; sourceTree = "<group>"; };
-		56AE5E5D2BE0050100C90CA9 /* DemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		56AE5E5F2BE0050100C90CA9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		56AE5E612BE0050100C90CA9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		56AE5E632BE0050100C90CA9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		56AE5E662BE0050100C90CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		56AE5E682BE0050400C90CA9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		56AE5E6B2BE0050400C90CA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		56AE5E6D2BE0050400C90CA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56AE5E712BE0051400C90CA9 /* MIPSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIPSViewController.swift; sourceTree = "<group>"; };
 		56AE5E732BE0207900C90CA9 /* PaymentMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentMode.swift; sourceTree = "<group>"; };
 		56AE5E752BE0209000C90CA9 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
@@ -94,15 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE983ABBC9ACAF6A02DAE687 /* Pods_MIPS_iOS_SDK.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56AE5E5A2BE0050100C90CA9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				56AE5E8D2BE0409200C90CA9 /* MIPS_iOS_SDK.framework in Frameworks */,
-				F5BB53E5B821B5AA71112886 /* Pods_DemoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,7 +84,6 @@
 			isa = PBXGroup;
 			children = (
 				56AE5E512BE003F000C90CA9 /* MIPS_iOS_SDK */,
-				56AE5E5E2BE0050100C90CA9 /* DemoApp */,
 				56AE5E502BE003F000C90CA9 /* Products */,
 				54FCD5B06A0E47794A34685C /* Pods */,
 				26486FD4A5341EA482F9BCE8 /* Frameworks */,
@@ -145,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */,
-				56AE5E5D2BE0050100C90CA9 /* DemoApp.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,20 +109,6 @@
 				56AE5E712BE0051400C90CA9 /* MIPSViewController.swift */,
 			);
 			path = MIPS_iOS_SDK;
-			sourceTree = "<group>";
-		};
-		56AE5E5E2BE0050100C90CA9 /* DemoApp */ = {
-			isa = PBXGroup;
-			children = (
-				56AE5E5F2BE0050100C90CA9 /* AppDelegate.swift */,
-				56AE5E612BE0050100C90CA9 /* SceneDelegate.swift */,
-				56AE5E632BE0050100C90CA9 /* ViewController.swift */,
-				56AE5E652BE0050100C90CA9 /* Main.storyboard */,
-				56AE5E682BE0050400C90CA9 /* Assets.xcassets */,
-				56AE5E6A2BE0050400C90CA9 /* LaunchScreen.storyboard */,
-				56AE5E6D2BE0050400C90CA9 /* Info.plist */,
-			);
-			path = DemoApp;
 			sourceTree = "<group>";
 		};
 		56AE5E792BE0232200C90CA9 /* Networking */ = {
@@ -249,26 +183,6 @@
 			productReference = 56AE5E4F2BE003F000C90CA9 /* MIPS_iOS_SDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		56AE5E5C2BE0050100C90CA9 /* DemoApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 56AE5E6E2BE0050400C90CA9 /* Build configuration list for PBXNativeTarget "DemoApp" */;
-			buildPhases = (
-				EE7BFE7DCF24AEB6399B33D9 /* [CP] Check Pods Manifest.lock */,
-				56AE5E592BE0050100C90CA9 /* Sources */,
-				56AE5E5A2BE0050100C90CA9 /* Frameworks */,
-				56AE5E5B2BE0050100C90CA9 /* Resources */,
-				56AE5E912BE0409300C90CA9 /* Embed Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				56AE5E902BE0409200C90CA9 /* PBXTargetDependency */,
-			);
-			name = DemoApp;
-			productName = DemoApp;
-			productReference = 56AE5E5D2BE0050100C90CA9 /* DemoApp.app */;
-			productType = "com.apple.product-type.application";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -282,9 +196,6 @@
 					56AE5E4E2BE003F000C90CA9 = {
 						CreatedOnToolsVersion = 15.1;
 						LastSwiftMigration = 1510;
-					};
-					56AE5E5C2BE0050100C90CA9 = {
-						CreatedOnToolsVersion = 15.1;
 					};
 				};
 			};
@@ -302,7 +213,6 @@
 			projectRoot = "";
 			targets = (
 				56AE5E4E2BE003F000C90CA9 /* MIPS_iOS_SDK */,
-				56AE5E5C2BE0050100C90CA9 /* DemoApp */,
 			);
 		};
 /* End PBXProject section */
@@ -312,16 +222,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		56AE5E5B2BE0050100C90CA9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				56AE5E6C2BE0050400C90CA9 /* LaunchScreen.storyboard in Resources */,
-				56AE5E692BE0050400C90CA9 /* Assets.xcassets in Resources */,
-				56AE5E672BE0050100C90CA9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,28 +250,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EE7BFE7DCF24AEB6399B33D9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DemoApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -394,44 +272,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		56AE5E592BE0050100C90CA9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				56AE5E642BE0050100C90CA9 /* ViewController.swift in Sources */,
-				56AE5E602BE0050100C90CA9 /* AppDelegate.swift in Sources */,
-				56AE5E622BE0050100C90CA9 /* SceneDelegate.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		56AE5E902BE0409200C90CA9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 56AE5E4E2BE003F000C90CA9 /* MIPS_iOS_SDK */;
-			targetProxy = 56AE5E8F2BE0409200C90CA9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		56AE5E652BE0050100C90CA9 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56AE5E662BE0050100C90CA9 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		56AE5E6A2BE0050400C90CA9 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				56AE5E6B2BE0050400C90CA9 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		56AE5E542BE003F000C90CA9 /* Debug */ = {
@@ -635,67 +476,6 @@
 			};
 			name = Release;
 		};
-		56AE5E6F2BE0050400C90CA9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2A64CA928E9FDF24161B0C1C /* Pods-DemoApp.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoApp/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mu.mips.DemoApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		56AE5E702BE0050400C90CA9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 22F6181E0B7EEC850BC70407 /* Pods-DemoApp.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = DemoApp/Info.plist;
-				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = mu.mips.DemoApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -713,15 +493,6 @@
 			buildConfigurations = (
 				56AE5E572BE003F000C90CA9 /* Debug */,
 				56AE5E582BE003F000C90CA9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		56AE5E6E2BE0050400C90CA9 /* Build configuration list for PBXNativeTarget "DemoApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				56AE5E6F2BE0050400C90CA9 /* Debug */,
-				56AE5E702BE0050400C90CA9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
