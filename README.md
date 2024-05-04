@@ -7,7 +7,7 @@ this is the official SDK of MIPS payment gateway for iOS platform
 #### 1. Cocoapods
 
 ```ruby
-	pod "MIPS_iOS_SDK"
+	pod 'MIPS_iOS_SDK'
 ```
 
 ## Prerequisite (will be provided MIPS Admin)
