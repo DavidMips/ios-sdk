@@ -63,41 +63,6 @@ public class NetworkAdaptor {
         }else{
             return false
         }
-        
-        
-//        AF.upload(
-//            body ?? .init(),
-//            to: mipsNetworkURl.paymentConfirmationUrl ,
-//            method: .post ,
-//            headers: .init([
-//                .init(
-//                    name: "Authorization",
-//                    value: "Basic \(getBasicAuthWithusernamePassword(username: credentials.username, password: credentials.password))"
-//                )
-//            ])
-//        )
-//        .response { afData in
-//            if let error = afData.error {
-//                errorHandler(error.localizedDescription)
-//                return
-//            }
-//            guard let data = afData.data
-//            else{
-//                errorHandler("no data found from server")
-//                return
-//            }
-//            let (json , err) = JSONCoder.decodeJson(data: data)
-//            if let err = err {
-//                errorHandler(err.localizedDescription)
-//                return
-//            }
-//            let status = json["order_status"] as? String  ?? ""
-//            if status.lowercased() == "success" {
-//                completion(true)
-//                return
-//            }
-//            completion(false)
-//        }
     }
     
     

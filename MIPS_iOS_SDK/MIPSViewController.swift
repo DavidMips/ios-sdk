@@ -6,8 +6,6 @@
 //
 
 import UIKit
-import CommonCrypto
-import CryptoKit
 import WebKit
 
 
@@ -41,14 +39,13 @@ open class MIPSViewController : UIViewController {
     
     
     public convenience init(
-        networkURL : MipsNetworkUrls ,
         merchantDetails : MerchantDetails ,
         credentials : MerchantCredentials ,
         amount : Amount ,
         orderID : String
     ) {
         self.init(nibName: nil, bundle: nil)
-        self.networkURL = networkURL
+        self.networkURL = .defaultUrls
         self.merchantDetails = merchantDetails
         self.credentials = credentials
         self.amount = amount
@@ -67,35 +64,62 @@ open class MIPSViewController : UIViewController {
     }
     
     public func createPayment() {
-        let totalAmount = amount.price * 100
-//        let orderID = merchantDetails.sIdForm
-        let checksum = "\(merchantDetails.sIdForm)\(orderID!)\(totalAmount)\(amount.currency.rawValue)\(merchantDetails.salt)".sha256()
+        let networkURL = self.networkURL!
+        let merchantDetails = self.merchantDetails!
+        let credentials = self.credentials!
+        let amount = self.amount!
+        let orderID = self.orderID!
         
-        let paymentJSON = MipsPaymentJSON()
-        paymentJSON.id_form = merchantDetails.sIdForm
-        paymentJSON.id_order = orderID!
-        paymentJSON.amount = totalAmount
-        paymentJSON.currency = amount.currency.rawValue
-        paymentJSON.checksum = checksum
-        
-        let (data , dataErr) = JSONCoder.encodeJso(json: paymentJSON)
-        guard dataErr == nil , let data = data
-        else {return}
-        
-        let jsonString = "\((String(data: data, encoding: .utf8))!)"
-        let middleUrl = try! jsonString.aesEncrypt(key: merchantDetails.sCipherKey)
-        let finalUrl = middleUrl.toBase64()
-        
-        let urlStirng = "\(self.networkURL.baseURl)\(finalUrl)&smid=\(self.merchantDetails.sIdMerchant)"
-        guard let urlToPayment = NSURL(string: urlStirng)
-        else{return}
-        
-        let req = URLRequest(url: urlToPayment as URL)
-        
-        self.webView!.load(req as URLRequest)
+//        let webView = self.webView!
         
         
-        setupNotificationListners()
+        Task {
+            let url = await NetworkAdaptor.getPaymentUrl(
+                networkURL: networkURL,
+                merchant: merchantDetails,
+                credentials: credentials,
+                amount: amount,
+                orderID: orderID
+            )
+            guard let url = url
+            else {return}
+            let req = URLRequest(url: url)
+            DispatchQueue.main.async {[weak self] in
+                self?.webView?.load(req as URLRequest)
+                self?.setupNotificationListners()
+            }
+        }
+       
+        
+        
+////        let orderID = merchantDetails.sIdForm
+//        let checksum = "\(merchantDetails.sIdForm)\(orderID!)\(totalAmount)\(amount.currency.rawValue)\(merchantDetails.salt)".sha256()
+//        
+//        let paymentJSON = MipsPaymentJSON()
+//        paymentJSON.id_form = merchantDetails.sIdForm
+//        paymentJSON.id_order = orderID!
+//        paymentJSON.amount = totalAmount
+//        paymentJSON.currency = amount.currency.rawValue
+//        paymentJSON.checksum = checksum
+//        
+//        let (data , dataErr) = JSONCoder.encodeJso(json: paymentJSON)
+//        guard dataErr == nil , let data = data
+//        else {return}
+//        
+//        let jsonString = "\((String(data: data, encoding: .utf8))!)"
+//        let middleUrl = try! jsonString.aesEncrypt(key: merchantDetails.sCipherKey)
+//        let finalUrl = middleUrl.toBase64()
+//        
+//        let urlStirng = "\(self.networkURL.baseURl)\(finalUrl)&smid=\(self.merchantDetails.sIdMerchant)"
+//        guard let urlToPayment = NSURL(string: urlStirng)
+//        else{return}
+//        
+//        let req = URLRequest(url: urlToPayment as URL)
+//        
+//        self.webView!.load(req as URLRequest)
+//        
+//        
+        
     }
     
     
@@ -103,21 +127,39 @@ open class MIPSViewController : UIViewController {
         LogManager.shared.info("App moved to foreground!")
         UIApplication.shared.endBackgroundTask(self.backgruondTask)
         self.backgruondTask = .invalid
-        
-        NetworkAdaptor.checkPaymentStatus(
-            mipsNetworkURl: self.networkURL,
-            merchant: self.merchantDetails, 
-            credentials: self.credentials,
-            orderID: self.orderID
-        ) { [weak self] isPaymentCompleted in
-            guard let self
-            else {return}
-            if isPaymentCompleted {
-                self.showSuceesPaymrnt(.juice)
+        let networkURL = self.networkURL!
+        let merchantDetails = self.merchantDetails!
+        let credentials = self.credentials!
+        let orderID = self.orderID!
+        Task {
+            let isPaymentDone = await NetworkAdaptor.checkPaymentStatus(
+                mipsNetworkURl: networkURL,
+                merchant: merchantDetails,
+                credentials: credentials,
+                orderID: orderID
+            )
+            if isPaymentDone {
+                DispatchQueue.main.async { [weak self] in
+                    self?.showSuceesPaymrnt(.juice)
+                }
             }
-        } errorHandler: { errorString in
-            LogManager.shared.error("got error while callin mips payment confirmation call with error  :=> \(errorString)")
         }
+
+//        
+//        NetworkAdaptor.checkPaymentStatus(
+//            mipsNetworkURl: self.networkURL,
+//            merchant: self.merchantDetails, 
+//            credentials: self.credentials,
+//            orderID: self.orderID
+//        ) { [weak self] isPaymentCompleted in
+//            guard let self
+//            else {return}
+//            if isPaymentCompleted {
+//                self.showSuceesPaymrnt(.juice)
+//            }
+//        } errorHandler: { errorString in
+//            LogManager.shared.error("got error while callin mips payment confirmation call with error  :=> \(errorString)")
+//        }
     }
     
     @objc func appMovedToBackground() {

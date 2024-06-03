@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MIPS_iOS_SDK'
-  s.version          = '0.3.0'
+  s.version          = '0.4.0'
   s.summary          = 'official iOS SDK for MIPS paymemnt services'
 
 # This description is used to generate tags and improve search results.
@@ -41,7 +41,7 @@ TODO: Add long description of the pod here.
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'CryptoSwift', '~> 1.8.2'
 
-  s.swift_version = '5.9'
+  s.swift_version = '~> 5.9'
 
   # pod 'CocoaLumberjack'
   s.dependency 'CocoaLumberjack/Swift'

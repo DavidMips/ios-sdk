@@ -11,7 +11,6 @@ import Foundation
 public class MerchantDetails {
     
     public let sIdMerchant : String
-    public let sIdForm : String
     public let salt : String
     public let sCipherKey : String
     public let id_entity : String
@@ -20,7 +19,6 @@ public class MerchantDetails {
     
     public init(
         sIdMerchant: String,
-        sIdForm: String,
         salt: String,
         sCipherKey: String,
         id_entity: String,
@@ -28,7 +26,6 @@ public class MerchantDetails {
         operator_password: String
     ) {
         self.sIdMerchant = sIdMerchant
-        self.sIdForm = sIdForm
         self.salt = salt
         self.sCipherKey = sCipherKey
         self.id_entity = id_entity

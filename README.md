@@ -35,20 +35,12 @@ this is the official SDK of MIPS payment gateway for iOS platform
 import MIPS_iOS_SDK
 ```
 
-2. create mips network model
-
-```swift
-let networkUrls : MipsNetworkUrls = .defaultUrls
-```
-
-3. create merchant detail model
+2. create merchant detail model
 
 ```swift
 let merchantDetails : MerchantDetails = .init(
 
             sIdMerchant: "YOUR_MERCHANT_ID",
-
-            sIdForm: "YOUR_ID_FORM",
 
             salt: "YOUR_SALT",
 
@@ -63,7 +55,7 @@ let merchantDetails : MerchantDetails = .init(
         )
 ```
 
-4. create merchant credential model
+3. create merchant credential model
 
 ```swift
  let credential : MerchantCredentials = .init(
@@ -75,7 +67,7 @@ let merchantDetails : MerchantDetails = .init(
         )
 ```
 
-5. take order ID and order amount
+4. take order ID and order amount
 
 ```swift
 let orderID : String = "YOUR_ORDER_ID"
@@ -83,12 +75,10 @@ let orderID : String = "YOUR_ORDER_ID"
 let amount : Amount = .init(currency: .Mauritian_Rupee, price: 100)
 ```
 
-6. Create payment page screen
+5. Create payment page screen
 
 ```swift
   let paymentPage : MIPSViewController = .init(
-
-            networkURL: networkUrls,
 
             merchantDetails: merchantDetails,
 

@@ -36,6 +36,7 @@ public class HttpHandler {
                 }
                 return continuation.resume(returning: (data , nil))
             }
+            .resume()
         }
     }
 }

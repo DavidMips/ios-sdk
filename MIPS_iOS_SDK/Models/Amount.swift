@@ -11,7 +11,7 @@ import Foundation
 public class Amount {
     public let currency : Currency
     public let price : Int
-    
+        
     public init(
         currency: Currency,
         price: Int
