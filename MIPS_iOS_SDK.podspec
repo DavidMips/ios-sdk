@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MIPS_iOS_SDK'
-  s.version          = '0.4.0'
+  s.version          = '0.5.0'
   s.summary          = 'official iOS SDK for MIPS paymemnt services'
 
 # This description is used to generate tags and improve search results.
@@ -31,21 +31,13 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '13.0'
 
   s.source_files = "MIPS_iOS_SDK/**/*.{h,m,swift}"
-  
-  # s.resource_bundles = {
-  #   'MIPS_iOS_SDK' => ['MIPS_iOS_SDK/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
-  s.dependency 'CryptoSwift', '~> 1.8.2'
+  # s.dependency 'CryptoSwift', '~> 1.8.2'
 
-  s.swift_version = '~> 5.9'
+  s.swift_version = '5.9'
 
-  # pod 'CocoaLumberjack'
-  s.dependency 'CocoaLumberjack/Swift'
+  # s.dependency 'CocoaLumberjack/Swift'
 
-  s.dependency 'Alamofire'
+  # s.dependency 'Alamofire'
 
 end
