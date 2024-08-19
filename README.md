@@ -1,3 +1,7 @@
+## 🚨 Warning -> Library is deprecated,
+
+## 🌟 updated library is available here -> [MIPS iOS SDK](https://github.com/MIPSIT-DIGITAL/ios-sdk/)
+
 ## About
 
 this is the official SDK of MIPS payment gateway for iOS platform
