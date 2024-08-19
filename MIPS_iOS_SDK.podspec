@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MIPS_iOS_SDK'
-  s.version          = '0.5.0'
+  s.version          = '0.6.0'
   s.summary          = 'official iOS SDK for MIPS paymemnt services'
 
 # This description is used to generate tags and improve search results.
@@ -18,7 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+    This lllibrary is deprecared
+
+    new library -> [iOS-SDK](https://github.com/MIPSIT-DIGITAL/ios-sdk)
+
                        DESC
 
   s.homepage         = 'https://github.com/DavidMips/ios-sdk'
